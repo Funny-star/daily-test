@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜单</title>
+    <style>
+        *{
+            background-color: #f0f0f0;
+        }
+        h1 {
+           
+            margin-left: -6px;
+            margin-right: -6px;
+            padding-left: 10px;
+            
+        }
+
+        .kind-of-dish{
+            padding: 10px 0;
+            border-bottom: 2px solid #4a6ee0;
+            margin-bottom: 20px;
+        }
+
+        
+        .dish{ 
+            margin: 10px;
+            padding: 20px 10px;
+            background-color: white;
+            border:2px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 10px;
+            border-radius: 7px;
+            max-width: 100%;
+            box-sizing: border-box; 
+        }
+
+        
+        .dish-name,.dish-desc,.dish-price{
+            flex: 1px 150px;
+            min-width: 120px;
+            background-color: white;
+        }
+
+        .dish-name{
+            font-size: 1.5em;
+            font-weight: 650;  
+        }
+
+        .dish-desc{
+            font-size: 1em;
+        }
+
+        .dish-price{
+            font-size: 1em;
+            color: blue;
+            font-weight: 650; 
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>前菜</h1>
+        <div class="kind-of-dish">
+            <div class="dish">
+                <span class="dish-name">沙拉</span>
+                <span class="dish-desc">新鲜的蔬菜和橄榄油，简单而美味。</span>
+                <span class="dish-price">￥28</span>
+            </div>
+            <div class="dish">
+                <span class="dish-name">汤</span>
+                <span class="dish-desc">经典番茄汤，口感浓郁。</span>
+                <span class="dish-price">￥18</span>
+            </div>
+        </div>
+    </div>
+    
+     
+    <div>
+        <h1>主菜</h1>
+        <div class="kind-of-dish">
+            <div class="dish">
+                <span class="dish-name">牛排</span>
+                <span class="dish-desc">外焦里嫩烤牛排，搭配特质酱汁。</span>
+                <span class="dish-price">￥88</span>
+            </div>
+            <div class="dish">
+                <span class="dish-name">海鲜意面</span>
+                <span class="dish-desc">新鲜海鲜与意面混合，口感丰富。</span>
+                <span class="dish-price">￥98</span>
+            </div>
+        </div>
+    </div>
+    
+    <div>
+        <h1>前菜</h1>
+        <div class="kind-of-dish">
+            <div class="dish">
+                <span class="dish-name">巧克力蛋糕</span>
+                <span class="dish-desc">香浓的巧克力蛋糕，搭配香草冰淇凌。</span>
+                <span class="dish-price">￥38</span>
+            </div>
+            <div class="dish">
+                <span class="dish-name">水果沙拉</span>
+                <span class="dish-desc">新鲜水果，清爽健康</span>
+                <span class="dish-price">￥22</span>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

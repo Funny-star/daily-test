@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    a:hover{
+        color: blue;}
+    
+    .header ul{
+        margin-left:20px ;
+        margin-top:20px ;
+        font-size: 14px;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 30px;
+    }
+    .more{
+        
+        margin-left: 60%;
+    }
+    a{
+        text-decoration: none;
+        color:black
+    }
+    #Logo {
+        margin: auto;
+        display:flex;
+        width: 250px;
+        margin-bottom: 20px;
+        margin-top: 100px;
+        max-width: 100%;
+    }
+    #form{
+        padding: 0 0 0 5px;
+        width: 800px;
+        height: 90px;
+        margin: auto;
+        margin-top: 1;
+        flex-direction: column;
+        border-radius: 10px;
+        border: 1.5px solid blue;
+        justify-content: center ;  
+    }
+    #form input{
+        border-radius: 10px;
+        width: 800px;
+        height: 40px;
+        border: 0 ;
+        font-size: 15px;
+        text-align: left;
+        outline: none;  
+        
+    }
+    .convenience-buttom{
+        gap: 17px;
+        width: 100%;
+        margin-left: 75%;
+        display: flex;
+        flex-direction: row;
+    }
+    #buttom1{
+        font-size: 15px;
+        color: aliceblue;
+        text-align: center;
+        line-height: 40px;
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: rgb(39, 1, 226);
+        border: none;
+        cursor: pointer;
+    }
+    #bottom1 p:hover{
+        box-shadow: 10px 10px black;
+    }
+    #buttom2 {
+        width: 20px;
+        height: 20px;
+        background-color: aliceblue;
+        border: 0;
+        margin-top: 15px;
+        
+    }
+    #buttom2 img{
+        padding: 0;
+        width: 20px;
+        height: 20px;
+    }
+    #buttom3 {
+        width: 20px;
+        height: 20px;
+        background-color: aliceblue;
+        border: 0;
+        margin-top: 15px;
+    }
+    #buttom3 img{
+        padding: 0;
+        width: 20px;
+        height: 20px;
+    }
+    .hot-news{
+        display:flex ;
+        flex-direction: row;
+        
+        padding: 0;
+        margin-left: 28%;
+        margin-top: 70px;
+        gap: 30px;
+        
+    }
+    .hot-news1{
+        width: 25%;
+        list-style: none;
+        line-height: 45px;
+    }
+    .hot-news2{
+        margin-top: 10px;
+        margin-left: 80px;
+        width: 25%;
+        list-style: none;
+        line-height: 45px;
+    }
+    #number-one{
+        font-size: 2em;
+        font-style: italic;
+        color: red;
+    }
+    #number-two{
+        font-size: 1.5em;
+        font-style: italic;
+        color: blue;
+    }
+    
+    
+    
+    
+   
+    
+</style>
+<body>
+
+    <header class="header">
+         <ul>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">视频</a></li>
+            <li><a href="#">图片</a></li>
+            <li><a href="#">知道</a></li>
+            <li><a href="#">贴吧</a></li>
+            <li><a href="#">地图</a></li>
+            <li class="more"><a href="#">更多功能</a></li>
+         </ul>
+    </header>
+    <main class="main">
+        
+        <img id="Logo" src="/resourse/result@2.png" alt="baidu">
+        
+        
+        <form id="form" action="/submit" method="post">  
+            <input  type="text" id="search"  placeholder="百度一下"  name="search">
+            <div class="convenience-buttom">
+
+                <button id="buttom3">
+                    <img  src="/resourse/ai_codeing.png" alt="ai">
+                </button>
+                
+                <button id="buttom2">
+                    <img  src="/resourse/eba505c38fe819615861ee2dc71991ac.png" alt="tupian">
+                </button>
+                
+                <button  id="buttom1">
+                    <p>百度一下</p>
+                </button>
+    
+            </div>
+            
+        </form>
+        
+        <div class="hot-news">
+            <ul class="hot-news1">
+                <li><a href="#"><span id="number-one">1.</span> 震惊王浚森尽然做出这种事情</a></li>
+                <li><a href="#"><span id="number-two">2.</span> 震惊王浚森尽然不是人</a></li>
+                <li><a href="#">3. 文教授叫你如何拥有一只自己的王浚森</a></li>
+                <li><a href="#">4. 某航母做出这种事情,尽然只是为了''''''</a></li>
+            </ul>
+
+            <ul class="hot-news2">
+                <li><a href="#">5. 文教授声称掌握了调教王浚森的办法</a></li>
+                <li><a href="#">6. 热烈庆祝王浚森成为CS三周年</a></li>
+                <li><a href="#">7. 王浚森作案第一视角</a></li>
+                <li><a href="#">8. 航母大战王俊森,两人尽然能做出这种事</a></li>
+            </ul>
+        </div>
+        
+    </main>
+    
+</body>
+</html>

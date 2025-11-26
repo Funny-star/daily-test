@@ -1,0 +1,60 @@
+.text-shower{
+    width: 250px;
+    background-color: brown;
+    color: white;
+    transition:0.5s;
+    margin: 50px;
+}
+._1:hover{
+    background-color: aqua;
+    font-size: 30px;
+    color: black;
+}
+._2{
+    line-height: 1.6;
+    background-color: aliceblue;
+}
+._3{
+    padding: 0;
+    margin: 0;
+    display: inline;
+    color: black;
+    background-color: aliceblue;
+    background-size: 0 4px;
+    background-image: linear-gradient(90deg,#ff6b6b,#4ecdc4);
+    background-position-y: calc(100% + 2px);
+    padding-bottom: 2px;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease-in-out;
+}
+._2:hover ._3{
+    background-size: 100% 4px;
+    background-position-x: 0;
+}
+._2:not(:hover) ._3{
+    background-size: 0 4px;
+    background-position-x: 100%;
+}
+.text{
+    margin: auto;
+    width: 150px;
+}
+.card{
+    width: 150px;
+    height: 600px;
+    margin: 50px;
+    background-color: #ff6b6b;
+    padding: 20px;
+    box-shadow:0 0 12px 5px rgb(96, 96, 96);
+}
+.card:hover{
+    box-shadow:0 0 12px 8px rgb(126, 126, 126);
+    width: 160px;
+    height: 610px;
+    position: relative;
+    top: -5px;
+}
+.card:hover .text{
+    width: 160px;
+    font-size: 17px;
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>餐厅菜单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f5f2;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }  
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #8b5a2b, #d4a76a);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .menu-section {
+            padding: 30px;
+            border-bottom: 1px dashed #e0d6c9;
+        }
+        
+        .menu-section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: #8b5a2b;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0d6c9;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #d4a76a;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .menu-item {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #f0ebe5;
+            position: relative;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            border-color: #d4a76a;
+        }
+        
+        .item-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #5c3d1e;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .item-price {
+            color: #b8860b;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .item-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #f8f5f2;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>精致美食菜单</h1>
+            <p>精选优质食材，用心烹制每一道菜品</p>
+        </header>
+        
+        <div class="menu-section">
+            <h2 class="section-title">前菜</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-name">
+                        <span>沙拉</span>
+                        <span class="item-price">¥28</span>
+                    </div>
+                    <p class="item-description">新鲜的蔬菜和橄榄油，简单而美味。</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">
+                        <span>汤</span>
+                        <span class="item-price">¥19</span>
+                    </div>
+                    <p class="item-description">经典的番茄汤，口感浓郁。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2 class="section-title">主菜</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-name">
+                        <span>牛排</span>
+                        <span class="item-price">¥88</span>
+                    </div>
+                    <p class="item-description">外观坚硬的烤牛排，搭配特制酱汁。</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">
+                        <span>海鲜露面</span>
+                        <span class="item-price">¥98</span>
+                    </div>
+                    <p class="item-description">新鲜海鲜与鱼露结合，口感丰富。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2 class="section-title">甜点</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-name">
+                        <span>巧克力蛋糕</span>
+                        <span class="item-price">¥38</span>
+                    </div>
+                    <p class="item-description">香浓的巧克力蛋糕，配上香草冰淇淋。</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">
+                        <span>水果沙拉</span>
+                        <span class="item-price">¥22</span>
+                    </div>
+                    <p class="item-description">新鲜水果，清爽健康。</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>感谢您的光临 | 期待再次为您服务</p>
+        </footer>
+    </div>
+</body>
+</html>
