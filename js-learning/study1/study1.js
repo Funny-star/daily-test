@@ -271,3 +271,381 @@
 //     }
 // }
 
+// 存储
+// 互相影响 ,并非真正的复制
+// var obj = {
+//     name:"123",
+//     age:"1234"
+// }
+// var obj2 = obj
+// document.writeln(obj2.name)
+
+// 不影响
+// var obj = {
+//     name:"123",
+//     age:"1234"
+// };
+
+// var obj2 = {};
+
+// for(var i in obj){
+//     obj2[i] = obj[i];
+// };
+// obj2.name = "12345"
+// console.log(obj,obj2);
+
+
+// 数组
+// var arr = [1 ,"hahaha",{
+//     name:"wxy",
+//     age:18
+// }];
+
+// for(var i in arr){
+//     console.log(arr[i]);
+// };
+
+// // length 可读可写
+// var arr = [1,2,3,4,5]
+// console.log(arr.length);
+
+// // 清空数组
+// arr.length = 0;
+// console.log(arr);
+
+// 索引
+// console.log(arr[0]);
+// arr[0] = 10;
+// console.log(arr[0]);
+// arr[10] = 1
+// console.log(arr)
+
+// 遍历
+// for(var i = 0; i < arr.length; i++){
+//     console.log(arr[i])
+// }
+
+// 复制
+// arr2 = []
+// for(var i in arr){
+//     arr2[i] = arr[i];
+// }
+// console.log(arr2)
+
+
+// let arr = [30, 29, 28, 37, 14, 10]
+// // 冒泡排序
+// for (var j = arr.length; j > 0; j--) {
+//     for (var i = 0; i < arr.length; i++) {
+//         if (arr[i] > arr[i + 1]) {
+//             var item = arr[i]
+//             arr[i] = arr[i + 1]
+//             arr[i + 1] = item
+//         }
+//     }
+// }
+// console.log(arr)
+
+// 选择排序
+// for(var i = 0; i < arr.length; i++){
+//     var item = arr[i];
+//     var key_item = i;
+//     for(var j = i+1 ; j <= arr.length; j++){
+//         if(item > arr[j]){
+//             var key_item = j
+//         };
+//     };
+//     arr[i] = arr[key_item];
+//     arr[key_item] = item;
+// };
+// console.log(arr);
+
+// 数组操作
+// var arr = [11, 10, 0, 5];
+// var arr2 = [13, 16, 19];
+// // push 在数组后面追加元素
+// var res = arr.push(7);
+// console.log(arr);
+// // 返回值 追加后的长度
+// console.log(res);
+
+// //pop 后面删除元素
+// var res2 = arr.pop();
+// console.log(arr);
+// // 返回值 删除的元素
+// console.log(res2);
+
+// //unshift 从前面加元素
+// var res3 = arr.unshift(10);
+// console.log(arr);
+// // 返回值为添加后长度
+// console.log(res3);
+
+// //shift 从前面删除
+// var res4 = arr.shift();
+// console.log(arr);
+// //返回值为删除的数据
+// console.log(res4);
+
+// // splice 删除
+// var res5 = arr.splice(1, 1);
+// console.log(arr);
+// // 返回值为删除的值
+// console.log(res5);
+
+// // splice 添加
+// var res6 = arr.splice(1, 0, 10);
+// console.log(arr);
+// // 返回值为删除的值
+// console.log(res6);
+
+
+// // reverse 倒叙
+// arr.reverse();
+// console.log(arr);
+
+
+// // sort 排序
+// // 一位一位排
+// arr.sort();
+// console.log(arr);
+
+// // sort接受一个回调函数
+// arr.sort(function(a,b){
+//     return b-a
+// });
+// console.log(arr);
+
+// concat 拼接
+// var arr3 = arr.concat(arr2);//拼接的数组是concat的返回值
+// console.log(arr,arr2,arr3);
+
+// 也可用于复制
+// var arr4 = arr.concat();
+
+// join 数组 => 字符串
+// document.writeln(arr.join("L "))
+
+// 练习
+// var arr = []
+// for(var i = 0; i < 10; i++){
+//     arr.push("<li>"+i+"</li>")
+// }
+// document.writeln(arr.join(" "))//去除数组的，
+
+// // slice 截取(开始索引，结束索引)
+// var arr = ["aaa", "bbb", "ccc", "ddd"]
+// var arr2 = arr.slice(1,3)
+// console.log(arr,arr2)
+// var arr3 = arr.slice(1,-1)
+// console.log(arr,arr3)
+// // 与splice的区别是splice会改变原数组，而slice不会
+// // 与concat一样可以用于复制
+
+// // indexof 返回查找的索引值（返回-1时找不到）
+// var arr = ["aaa", "bbb", "ccc", "ddd", "aaa"]
+// var res = arr.indexOf("aaa")
+// console.log(res)
+// // 查找重复元素时，返回找到的第一个元素的值
+
+// // lastIndexof 从后向前返回查找的索引值（返回-1时找不到）
+// var arr = ["aaa", "bbb", "ccc", "ddd", "aaa"]
+// var res = arr.lastIndexOf("aaa")
+// console.log(res)
+// // 查找重复元素时，返回找到的第一个元素的值
+
+// 数组去重
+// var arr = ["aaa", "bbb", "bbb", "ccc", "ddd", "aaa"]
+// 方法一
+
+// var arr2 = []
+// for(var i in arr){
+//     if(arr2.indexOf(arr[i]) == -1){
+//         arr2.push(arr[i])
+//     }
+// }
+// console.log(arr,arr2)
+
+// 方法2
+// var arr2 = []
+// var obj = {}
+// for(var i in arr){
+//     obj[arr[i]] = arr[i];
+// }    
+// for(var i in obj){
+//     arr2.push(obj[i])
+// }
+// console.log(arr2)
+
+// // 方法三 new-set
+// var set1 = new Set(arr)
+// var arr1 = Array.from(set1)
+// console.log(arr1)
+
+// forEach 遍历
+// var arr = ["aaa","bbb","ccc"];
+// arr.forEach(function(item,index,arr){
+//     console.log(item,index,arr)
+// })
+
+// map 映射
+// var arr = [1 ,2 ,3 ,4];
+// var arr2 = arr.map(function(item){
+//     return item*item;
+// })
+// console.log(arr , arr2)
+
+// 练习
+// var arr = ["aaa", "bbb", "ccc"];
+// var arr2 = arr.map(function (item) {
+//     return "<li>" + item + "</li>";
+// })
+// console.log(arr2)
+// document.writeln(arr2.join(""));
+
+// filter 过滤
+// var arr = [1 ,2 ,3 ,4];
+// var arr2 = arr.filter(function(item){
+//     return item >= 3;
+// })
+
+// console.log(arr2);
+
+// var arr = [
+//     {
+//         name:"aaa",
+//         price:100
+// },
+//     {
+//         name:"bbb",
+//         price:200
+// },
+//     {
+//         name:"ccc",
+//         price:300
+// },
+// ]
+// var arr2 = arr.filter(function(item){
+//     return item.price >= 200;
+// })
+// console.log(arr2);
+
+
+// every 每一个 会返回boor值
+// var arr = [10, 20, 30, 40]
+// var arr2 = arr.every(function(item){
+//     return item <= 50;
+// })
+// console.log(arr2)
+
+// some 有一个以上 会返回boor值
+// var arr = [10, 20, 30, 40]
+// var arr2 = arr.some(function(item){
+//     return item <= 20;
+// })
+// console.log(arr2)
+
+// find 重复只找第一项
+// var arr = [
+//         {
+//         name:"语文",
+//         grade:100
+//     },
+//         {
+//         name:"数学",
+//         grade:100
+//     },
+//         {
+//         name:"英语",
+//         grade:100
+//     }
+// ]
+// var arr2 = arr.find(function(item){
+//     return item.grade === 100;
+// })
+// console.log(arr2)
+
+// reduce 叠加
+// var arr = [1, 2, 3, 4]
+// var arr2 = arr.reduce(function(prev,item){
+//     return prev+item;
+// },100)//100为初始值
+// console.log(arr2)
+
+
+
+// 字符串
+// var str1 = "123"
+// var str2 = new String("123")
+// console.log(str1,str2)
+// console.log(str1.length)
+
+// charAt（索引） 返回索引的字符
+// var str1 = "12345456"
+// console.log(str1.charAt(4))
+
+
+// charCodeAt  返回对应字符的ASCLL编码
+// var str1 = "12345456"
+// console.log(str1.charCodeAt(4))
+
+// 输出字母表
+// var arr = [];
+// for(var i = 65; i < 91; i++){
+//     console.log(String.fromCharCode(i));
+//     arr.push(String.fromCharCode(i));
+// }
+// console.log(arr);
+
+// toUpperCase() toLowerCase()   转换大小写
+// var str1 = "hellow";
+// var str2 = 'HELLOW'
+// console.log(str1.toUpperCase())
+// console.log(str2.toLowerCase())
+
+// 截取  substr   substring   slice
+// var str = "123456"
+// var str1 = str.substring(2, 5)//开始索引和结束索引，当第二个值小于第一个值时令算
+// var str2 = str.slice(1 ,2)//开始索引和结束索引
+// console.log(str1,str2)
+
+// replace
+// var str = "abdkhsj";
+// var str1 = str.replace("a", "*");
+// console.log(str1);
+
+// split 分割 join
+// var str = "a|b|c|d"
+// console.log(str.split("|"))
+
+// trim 去除首尾部空格
+// trimStart() trimRight或 trimEnd() trimLeft去除首或尾部空格
+// var str = "    hellow    world    "
+// console.log("|"+str.trim()+"|")
+
+// 模糊查询
+// var arr = ["aaa", "bbb", "ccc", "abcd", "cbd"]
+// var imput = prompt("亲输入查询内容")
+// var result = arr.filter(function(item){
+//      return item.indexOf(imput) > -1
+// })
+// document.writeln(result.join("|"))
+
+// json字符串
+// var str1 = '{"name":"wxy", "age":"123"}'
+// console.log(JSON.parse(str1))
+// var obj1 = {
+//     name:"wxy",
+//     age:19
+// }
+// console.log(JSON.stringify(obj1))
+
+// 模板字符串
+// var str = `<li>1</li>
+// <li>1</li>
+// <li>1</li>`
+// document.writeln(str)
+
+// var myname = "wxy"
+// var str = `my name is ${myname} ${10+20}`//也可以是三目表达式
+// document.writeln(str)    
