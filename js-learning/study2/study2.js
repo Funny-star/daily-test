@@ -110,3 +110,115 @@
 //         天${obj.hours}小时${obj.minutes}
 //         分钟${obj.seconds}秒`
 // },1000)
+
+// BOM
+// 获取浏览器窗口尺寸
+// let windowHeight = window.innerHeight;
+// console.log(windowHeight);
+// let windowWidth = window.innerWidth;x
+// console.log(windowWidth)
+
+// alert
+// btn.onclick = function(){
+//     alert("001")
+// }
+
+// setTimeout(function(){
+//     alert("缓存清理完毕")
+// },2000)
+
+// 询问框
+// btn.onclick = function(){
+//     let choose = confirm("确定删除吗") 
+//     console.log(choose)
+// }
+
+// 输入框 prompt
+// btn.onclick = function(){
+//     let name = prompt("请输入你的用户名")
+//     alert(`welcome ${name}`)
+// }
+
+// 浏览器地址信息
+// href 可读可写
+// console.log(window.location.href)//window可省
+// 中文会被编码，可用decodeURI解码
+//跳转页面
+// btn.onclick = function(){
+//     location.href = "https://www.bilibili.com/"
+// }
+
+//reload 从新加载
+// btn.onclick = function(){
+//     location.reload()
+// }
+
+// 浏览器常用事件
+// window.onload = function(){
+//     console.log("加载完成")
+// }
+// 在页面中所有元素加载完成过后才会执行
+
+// onresize 改变窗口大小时
+// window.onresize = function(){
+//     console.log("resize")
+// }
+
+// onscroll 窗口滚动时
+// window.onscroll = function(){
+//     console.log("1")
+// }
+
+// window.onscroll = function(){
+//     console.log(document.documentElement.scrollTop)
+//     console.log(this.document.documentElement.scrollLeft)
+// }
+
+// 应用
+// window.onscroll = function(){
+//     if((document.documentElement.scrollTop) > 1000){
+//     console.log("123")
+// }else{
+//     console.log("")
+// }
+
+// }
+
+// 写法一
+// btn.onclick = function(){
+//     window.scrollTo(0,0)
+// }
+// 写法二
+// btn.onclick = function(){
+//     window.scrollTo({
+//         left: 0,
+//         top: 0
+//     })
+// }
+
+// 开
+// btn.onclick = function(){
+//     window.open("http://www.baidu.com")
+// }
+
+// 关
+// btn.onclick = function(){
+//     window.close()
+// }
+
+// history
+// btn.onclick = function(){
+//     location.href = "study2_1.html"
+// }
+
+// back_button.onclick = function(){
+//     history.back()
+//     history.go(-1)
+// }
+
+// forward_button.onclick = function(){
+//     history.forward()
+//     history.go(1)
+// }
+
+// 本地存储 
