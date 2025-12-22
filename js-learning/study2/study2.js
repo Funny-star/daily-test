@@ -222,3 +222,75 @@
 // }
 
 // 本地存储 
+// store.onclick = function(){
+//     localStorage.setItem("age","200"m)
+//     console.log("存储成功")
+// }
+
+// get.onclick = function(){
+//     console.log(localStorage.getItem("age"))
+// }
+
+// del.onclick = function(){
+//     localStorage.removeItem("age")
+//     console.log("删除成功")
+// }
+
+// cle.onclick = function(){
+//     localStorage.clear()
+//     console.log("清除成功")
+// }
+
+// 存取对象要先将对象转化为json格式
+// store.onclick = function(){
+//     localStorage.setItem("obj",JSON.stringify({name:"wxy",age:"19"}))
+// }
+
+// get.onclick = function(){
+//     console.log(JSON.parse(localStorage.getItem("obj")))
+// }
+
+// sessionStorage 会话存储
+// store.onclick = function(){
+//     sessionStorage.setItem("obj",JSON.stringify({name:"wxy",age:"19"}))
+// }
+
+// get.onclick = function(){
+//     console.log(JSON.parse(sessionStorage.getItem("obj")))
+// }
+
+// DOM
+// 获取节点
+// html,head,body 非常规
+// console.log(document.documentElement)
+// console.log(document.head)//获取head
+// console.log(document.body)//获取body
+
+// 常规
+
+// id
+// let obox = document.getElementById("box")
+// obox.innerHTML = "222"
+
+// class
+// let onew = document.getElementsByClassName("new")
+// console.log(onew)//伪数组 无法调用部分 数组相关方法
+
+// 遍历
+// for (let i = 0; i < onew.length; i++){
+//     console.log(`new-${i}-${onew[i]}`)
+// }
+
+// 转化为真数组
+// let onewArr = Array.from(onew)
+// console.log(onewArr.filter)
+
+// name标签名
+// getElementsByName 同上
+
+// querySelector 和css选择器规则类似
+// let obox = document.querySelector("#box")
+// obox.innerHTML = "222"
+
+// querySelectorAll
+// let onew = document.querySelectorAll(".new,#box")
