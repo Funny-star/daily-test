@@ -8,7 +8,7 @@
 
 //参数
 // var date = new Date(2025, 12, 16, 9, 23, 10)
-// console.log(date) 
+// console.log(date)
 
 // 字符串
 // var date = new Date("2023-10-20 10:10:10")
@@ -81,7 +81,7 @@
 //     setInterval(function(){
 //     console.log(new Date())
 //     },1000)
-// }  
+// }
 
 
 // 结合时间间隔定时器制作倒计时
@@ -99,7 +99,7 @@
 //         minutes:minutes,
 //         seconds:seconds,
 //     };
-//     return obj;   
+//     return obj;
 // }
 // const element = document.getElementById('box')
 // var time2 = setInterval(function(){
@@ -129,7 +129,7 @@
 
 // 询问框
 // btn.onclick = function(){
-//     let choose = confirm("确定删除吗") 
+//     let choose = confirm("确定删除吗")
 //     console.log(choose)
 // }
 
@@ -221,7 +221,7 @@
 //     history.go(1)
 // }
 
-// 本地存储 
+// 本地存储
 // store.onclick = function(){
 //     localStorage.setItem("age","200"m)
 //     console.log("存储成功")
@@ -293,4 +293,128 @@
 // obox.innerHTML = "222"
 
 // querySelectorAll
-// let onew = document.querySelectorAll(".new,#box")
+// let onew = document.querySelectorAll(".new,#box")  
+
+// 元素操作
+// 调用元素属性
+// let checkedInput = document.getElementById("check")
+// checkedInput.onclick = function () {
+//     console.log(checkedInput.checked)
+// }
+
+// 修改元素属性
+// let photo = document.querySelector("img")
+// checkedInput.onclick = function () {
+//     let ocondition = checkedInput.checked
+//     if (checkedInput.checked) {
+//         photo.src = "/js-learning/study2/img/OIP-C.jpg"
+//         photo.style.display = "block"
+//     } else {
+//         photo.style.display = "none"
+//     }
+// }
+
+// 自定义属性
+
+//方法一
+// checkedInput.setAttribute("times",0)
+// let ocondition = checkedInput.checked
+// checkedInput.onclick = function(){
+//     if(ocondition !== checkedInput.checked){
+//         var times = parseInt(checkedInput.getAttribute("times"))
+//         checkedInput.setAttribute("times",++times)
+//         ocondition = checkedInput.checked
+//         console.log(`你已经点击了${times}次`)
+//     }
+// }
+
+//方法2
+//data-自定义属性
+// checkedInput.dataset.times = 0
+// checkedInput.onclick = function(){
+//     checkedInput.dataset.times++
+//     console.log(`你已经点击了${checkedInput.dataset.times}次`)
+// }
+
+//练习
+
+// let passwardInput =document.getElementById("passward")
+// let eyeInput = document.getElementById("eye")
+// passwardInput.type = "password"
+// eyeInput.onclick = function(){
+//     if(eyeInput.checked){
+//         passwardInput.type = "text"
+//     }else{
+//         passwardInput.type = "password"
+//     }
+// }
+
+//操作元素文本内容
+//innerhtml
+// let obox = document.getElementById("box")
+// obox.innerHTML = "222"
+// //innerText
+// console.log(obox.innerText)//获取文本内容不解析HTML内容
+// obox.innerText = "<div>333</div>"//设置文本内容不解析HTML内容
+// //value
+// let oinput = document.querySelector("input")
+// console.log(oinput.value)//获取输入框的值
+// oinput.value = "hello"//设置输入框的值
+
+
+//操作元素样式
+// .style 只能获取行内属性 --读写
+// let box = document.getElementById("box")
+// console.log(box.style.width)
+// console.log(box.style["background-color"])
+// console.log(box.style.backgroundColor)
+// 设置
+// box.style.width = "200px"
+// box.style["background-color"] = "red"
+// 内部样式，外部样式，行内样式
+// getComputedStyle() 只读
+// let boxStyle = getComputedStyle(box)
+// console.log(boxStyle.height)
+// console.log(boxStyle.backgroundColor)
+
+// 操作元素类名
+// className 读写
+// let box3 = document.getElementById("box3")
+// console.log(box3.className)//获取类名
+// box3.className = "item item2"//设置类名
+// classList 读写
+// console.log(box3.classList)//获取类名列表
+// add 添加类名
+// box3.classList.add("item2")
+// remove 删除类名
+// box3.classList.remove("item2")
+// toggle 切换类名
+// btn3.onclick = function(){
+//     box3.classList.toggle("item2")
+// }
+
+// 练习 选项卡
+// let header = document.querySelectorAll(".header li")
+// let text = document.querySelectorAll(".text li")
+// let oindex = 0
+// let setuation = true
+// for (let i = 0; i < header.length; i++) {
+//     header[i].dataset.index = i
+//     header[i].onclick = backgroundChange
+// }
+
+
+// function backgroundChange(){
+//     if (oindex === this.dataset.index&&setuation) {
+//         text[oindex].classList.remove("active2")
+//         header[oindex].classList.remove("active")
+//         setuation = false
+//     } else {
+//         header[oindex].classList.remove("active")
+//         text[oindex].classList.remove("active2")
+//         oindex = this.dataset.index
+//         header[oindex].classList.add("active")
+//         text[oindex].classList.add("active2")
+//         setuation = true
+//     }
+// }
